@@ -6,7 +6,7 @@ import { corsMiddleware } from './middlewares/cors.js';
 
 export const createApp = ({ movieModel }) => {
     const app = express();
-    const PORT = process.env.PORT ?? 3000;
+    const PORT = process.env.MYSQLPORT ?? 3000;
     app.disable('x-powered-by');
     app.use(json());
     app.use(corsMiddleware());
