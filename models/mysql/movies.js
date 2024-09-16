@@ -1,20 +1,14 @@
 import mysql from 'mysql2/promise';
 
-const DEFAULT_CONFIG = {
-    host: 'localhost',
-    user: 'root',
-    port: 3306,
-    password: 'root',
-    database: 'moviesdb',
-};
-
-const connection = await mysql.createConnection({
+const config = {
     host: process.env.MYSQLHOST,
     user: process.env.MYSQLUSER,
     port: process.env.MYSQLPORT,
     password: process.env.MYSQLPASSWORD,
     database: process.env.MYSQLDATABASE,
-});
+};
+
+const connection = await mysql.createConnection(config);
 
 export class MovieModel {
     static async getAll({ genre }) {
