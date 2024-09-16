@@ -1,4 +1,4 @@
-import mysql from 'mysql2/promise';
+import { createPool } from 'mysql2/promise';
 import 'dotenv/config';
 
 const config = {
@@ -9,7 +9,7 @@ const config = {
     database: process.env.MYSQLDATABASE,
 };
 
-const connection = await mysql.createConnection(config);
+export const connection = createPool(config);
 
 export class MovieModel {
     static async getAll({ genre }) {
