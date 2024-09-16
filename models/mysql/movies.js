@@ -1,15 +1,13 @@
 import { createPool } from 'mysql2/promise';
 import 'dotenv/config';
 
-const config = {
-    host: process.env.MYSQLHOST,
-    user: process.env.MYSQLUSER,
-    port: process.env.MYSQLPORT,
-    password: process.env.MYSQLPASSWORD,
-    database: process.env.MYSQLDATABASE,
-};
-
-export const connection = createPool(config);
+export const connection = createPool({
+    host: process.env.HOSTDB,
+    user: process.env.USERDB,
+    port: process.env.PORTDB,
+    password: process.env.PASSWORDDB,
+    database: process.env.DB,
+});
 
 export class MovieModel {
     static async getAll({ genre }) {

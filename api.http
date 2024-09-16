@@ -1,14 +1,14 @@
 ### Recuperar todas las peliculas
-GET http://localhost:3306/movies
+GET http://localhost:38312/movies
 
 ### Recuperar una pelicula por id
-GET  http://localhost:1234/movies/9c52903b-720e-11ef-92a4-d8bbc14f718d
+GET  http://localhost:38312/movies/9c52903b-720e-11ef-92a4-d8bbc14f718d
 
 ### Recupera todas las peliculas por un genero
-GET http://localhost:1234/movies?genre=Crime
+GET http://localhost:38312/movies?genre=Crime
 
 ### Crear una pelicula con POST
-POST http://localhost:1234/movies
+POST http://localhost:38312/movies
 Content-Type: application/json
 
 {
@@ -25,10 +25,10 @@ Content-Type: application/json
 }
 
 ### Borrar una pelicula
-DELETE http://localhost:1234/movies/618dd0f8-72b1-11ef-92a4-d8bbc14f718d
+DELETE http://localhost:38312/movies/9962fabd-746c-11ef-86cf-a2aafb79dea2
 
 ### Para actualizar una pelicula
-PATCH http://localhost:1234/movies/9c52903b-720e-11ef-92a4-d8bbc14f718d
+PATCH http://localhost:38312/movies/4c9079a4-7469-11ef-86cf-a2aafb79dea2
 Content-Type: application/json
 
 {
